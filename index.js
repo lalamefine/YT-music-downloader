@@ -55,7 +55,7 @@ app.get("/", async (req, res) => {
         let gptCallPromise = null;
         if(process.env.OPENAI_API_KEY){
           console.log("Asking for filename to GPT-3");
-          gptCallPromise = askFileName(info.videoDetails.title);
+          gptCallPromise = askFileName(info.videoDetails.title,info.videoDetails.description);
         }
           
         // Create a write stream to save the video file
@@ -70,7 +70,11 @@ app.get("/", async (req, res) => {
           if(gptCallPromise) {
             filename = await gptCallPromise + "." + audioFormats[0].container;
             console.log("Renaming file to " + filename);
-            fs.renameSync(outputFilePath, outputFileDir + filename);
+            try {
+              fs.renameSync(outputFilePath, outputFileDir + filename);
+            } catch (error) {
+              console.error(error);
+            }
           }
           console.log(`Finished downloading: ${outputFilePath}`);
           const body = "<ul><li><b>=> "+removeFileExtension(filename)+"</b></li>"+dirfilesString+"</ul>";

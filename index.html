@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>YT-Download</title>
-  </head>
-  <body>
-      <form>
-          <input type="text" name="url" placeholder="URL">
-      </form>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <title>YT-Download</title>
+        <style>
+        input {
+            border-radius: 5px;
+            margin: 2rem 10vw;
+            height: 10vh;
+        }
+        input[type="text"] {
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+        input[type="submit"] {
+            font-size: 2rem;
+            background-color: #3425b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20vh;
+        }
+        ul{
+            font-size: 2rem;
+            margin: 2rem 10vw;
+        }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="url" placeholder="URL">
+            <input type="submit">
+            <p id="result"></p>
+        </form>
+    </body>
 </html>

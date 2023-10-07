@@ -1,0 +1,16 @@
+{
+  "name": "@yt-music-dl/interface-chatgpt",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "chatgpt.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Louis TRIBOULIN",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^4.11.1"
+  }
+}

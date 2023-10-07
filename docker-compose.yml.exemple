@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build: https://github.com/lalamefine/YT-music-downloader.git
+    ports:
+    - 5000:5000
+    environment:
+      - OPENAI_API_KEY=YOUR_API_KEY
+    volumes:
+      - OUTPUT_DIR:/app/output

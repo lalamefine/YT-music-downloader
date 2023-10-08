@@ -9,7 +9,7 @@ import {createServer} from "http";
 dotenv.config();
 
 const port = process.env.PORT || 5000;
-const outputFileDir = (process.env.TARGET_DIRECTORY??"./output")+path.sep;
+const outputFileDir = (process.env.TARGET_DIRECTORY ? process.env.TARGET_DIRECTORY : "./output")+path.sep;
 
 if(process.env.OPENAI_API_KEY)
   initGpt(process.env.OPENAI_API_KEY);

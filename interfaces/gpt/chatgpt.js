@@ -13,7 +13,7 @@ const requestText = `
   ARTISTE - MORCEAU
   Si il y a un ou plusieurs featurings, tu dois les mettre sous la forme :
   ARTISTE - MORCEAU (ft. ARTISTE2, ...)
-  Du ne dois rien répondre d'autre.
+  Du ne dois rien répondre d'autre. Si tu rencontre une erreur ou que tu ne comprends pas la demande, tu dois renvoyer le titre de la vidéo
   Titre de la vidéo : 
   {TITLE}
   Description de la vidéo :
